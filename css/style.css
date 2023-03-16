@@ -1,4 +1,106 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  background: #1f242d;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: #1f242d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 4rem;
+}
+.header .navbar a:hover, .header .navbar a.active {
+  color: #0ef;
+}
+.header #menu-icon {
+  font-size: 3.6rem;
+  color: #fff;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.home .home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.home .home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home .home-content p {
+  font-size: 1.6rem;
+}
+.home .home-content .social-media a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid #0ef;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+.home .home-img img {
+  width: 35vw;
 }
