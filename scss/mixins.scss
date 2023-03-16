@@ -1,12 +1,21 @@
 @mixin grid($cols, $margin) {
     float: left;
     background: rgb(218, 0, 0);
-    margin-right: $margin;
-    margin-bottom: $margin;
     height: 150px;
-    width: ((100% - (($cols - 1) * $margin)) / $cols);
     &:nth-child(#{$cols}n) {
         margin-right: 0;
+    }
+    @if ($cols == 2) {
+        width: ((90% - (($cols - 1) * $margin)) / $cols);
+        margin: $margin / 2;
+    }
+    @else {
+        width: ((100% - (($cols - 1) * $margin)) / $cols);
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:hover {
+        background: fade-out($color: rgb(218, 0, 0), $amount: 0.3);
     }
 }
 

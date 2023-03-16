@@ -21,13 +21,31 @@ a:active {
 #grid > div {
   float: left;
   background: rgb(218, 0, 0);
-  margin-right: 2%;
-  margin-bottom: 2%;
   height: 150px;
   width: 23.5%;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 #grid > div:nth-child(4n) {
   margin-right: 0;
+}
+#grid > div:hover {
+  background: rgba(218, 0, 0, 0.7);
+}
+@media (max-width: 840px) {
+  #grid > div {
+    float: left;
+    background: rgb(218, 0, 0);
+    height: 150px;
+    width: 43%;
+    margin: 2%;
+  }
+  #grid > div:nth-child(2n) {
+    margin-right: 0;
+  }
+  #grid > div:hover {
+    background: rgba(218, 0, 0, 0.7);
+  }
 }
 
 .block:not(.first) {
@@ -64,4 +82,24 @@ a:active {
   height: 100px;
   width: 300px;
   margin-bottom: 20px;
+}
+
+.some_class_1 {
+  width: 21px;
+  height: 21px;
+}
+
+.some_class_2 {
+  width: 22px;
+  height: 22px;
+}
+
+.some_class_3 {
+  width: 23px;
+  height: 23px;
+}
+
+.some_class_4 {
+  width: 24px;
+  height: 24px;
 }

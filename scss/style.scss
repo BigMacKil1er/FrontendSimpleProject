@@ -13,9 +13,11 @@
     width: 100%;
     > div {
         @include grid(4, 2%);
+        @media (max-width: 840px) {
+            @include grid(2, 4%);
+        }
     }
 }
-
 .block:not(.first) {
     background: $bgcolor;
     height: 200px;
@@ -53,3 +55,9 @@
     margin-bottom: 20px;
 }
 
+@for $i from 1 to 5 {
+    .some_class_#{$i} {
+        width: 20px + $i;
+        height: 20px + $i;
+    }
+}
