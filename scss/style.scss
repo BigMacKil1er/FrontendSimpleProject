@@ -85,6 +85,14 @@ section {
                 border: .2rem solid $maincolor;
                 border-radius: 50%;
                 font-size: 2rem;
+                color: $maincolor;
+                margin: 3rem 1.4rem 3rem;
+                transition: all ease 0.5s;
+                &:hover {
+                    background: $maincolor;
+                    color: $bgcolor2;
+                    box-shadow: 0 0 1rem $maincolor;
+                }
             }
         }
         

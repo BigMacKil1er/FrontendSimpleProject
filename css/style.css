@@ -100,6 +100,16 @@ section {
   border: 0.2rem solid #0ef;
   border-radius: 50%;
   font-size: 2rem;
+  color: #0ef;
+  margin: 3rem 1.4rem 3rem;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.home .home-content .social-media a:hover {
+  background: #0ef;
+  color: #323946;
+  -webkit-box-shadow: 0 0 1rem #0ef;
+          box-shadow: 0 0 1rem #0ef;
 }
 .home .home-img img {
   width: 35vw;
