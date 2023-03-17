@@ -179,15 +179,125 @@ span {
   margin: 2rem 0 3rem;
 }
 
-.education .education-box h3 {
+.education {
+  position: relative;
+  max-width: 1660px;
+  margin: 0 auto;
+}
+.education .education-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.education .education-intro h3 {
   text-align: center;
   font-size: 2.6rem;
   margin-top: 2rem;
 }
-.education .education-box p {
+.education .education-intro p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-.education .education-box a {
+.education button i {
+  position: absolute;
+  font-size: 7rem;
+  z-index: 3;
+  top: 25px;
+  left: 48%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: rgb(163, 0, 0);
+  border: 0.4rem solid rgb(163, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.education button i:hover {
+  -webkit-transform: rotate(315deg) scale(1.02);
+          transform: rotate(315deg) scale(1.02);
+  color: #ff3d3d;
+}
+.education .education-wrapper-box {
+  margin-top: 8rem;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 5rem;
+  background: #1f242d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+.education .education-wrapper-box .education-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  background: #323946;
+  min-width: 50rem;
+  min-height: 30rem;
+  border-radius: 2rem;
   text-align: center;
+  border: 0.2rem solid #1f242d;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.education .education-wrapper-box .education-box i {
+  position: static;
+  font-size: 7rem;
+  color: #0ef;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.education .education-wrapper-box .education-box h3 {
+  font-size: 2.6rem;
+}
+.education .education-wrapper-box .education-box h4 {
+  font-size: 2rem;
+}
+.education .education-wrapper-box .education-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+.education .education-wrapper-box .education-box a {
+  margin-bottom: 3rem;
+}
+.education .education-wrapper-box .education-box:hover {
+  border-color: #0ef;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.experience {
+  background: #323946;
+}
+.experience h2 {
+  margin-bottom: 4rem;
+}
+.experience .education-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2.5rem 1fr 2.5rem 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }

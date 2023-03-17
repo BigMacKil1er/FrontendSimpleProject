@@ -165,7 +165,14 @@ span {
 }
 
 .education {
-    .education-box {
+    position: relative;
+    max-width: 1660px;
+    margin: 0 auto;
+    .education-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         h3 {
             text-align: center;
             font-size: 2.6rem;
@@ -175,9 +182,86 @@ span {
             font-size: 1.6rem;
             margin: 2rem 0 3rem;
         }
-        a {
-            text-align: center;
+    }
+    button {
+        i {
+            position: absolute;
+            font-size: 7rem;
+            z-index: 3;
+            top: 25px;
+            left: 48%;
+            transform: rotate(45deg);
+            color: rgb(163, 0, 0);
+            border: .4rem solid rgb(163, 0, 0);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .5s ease;
+            &:hover {
+                transform: rotate(315deg) scale(1.02);
+                color: lighten($color: rgb(163, 0, 0), $amount: 30%);
+            }
         }
     }
     
+    .education-wrapper-box {
+        margin-top: 8rem;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        padding: 5rem;
+        background: $bgcolor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .education-box {
+            flex: 1 1 30rem;
+            background: $bgcolor2;
+            // padding: 3rem 2rem 4rem;
+            min-width: 50rem;
+            min-height: 30rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid $bgcolor;
+            transition: .5s ease;
+            i {
+                position: static;
+                font-size: 7rem;
+                color: $maincolor;
+                transform: rotate(0);
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            h4 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.6rem;
+                margin: 1rem 0 3rem;
+            }
+            a {
+                margin-bottom: 3rem;
+            }
+            &:hover {
+                border-color: $maincolor;
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.experience {
+    background: $bgcolor2;
+    h2 {
+        margin-bottom: 4rem;
+    }
+    .education-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        
+    }
 }
