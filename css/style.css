@@ -20,6 +20,15 @@ body {
   color: #fff;
 }
 
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+span {
+  color: #0ef;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -58,13 +67,28 @@ body {
   display: none;
 }
 
-section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: #0ef;
+  border-radius: 4rem;
+  -webkit-box-shadow: 0 0 1rem #0ef;
+          box-shadow: 0 0 1rem #0ef;
+  font-size: 1.6rem;
+  color: #323946;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-span {
-  color: #0ef;
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
 }
 
 .home {
@@ -125,30 +149,6 @@ span {
 }
 .home .home-img img {
   width: 35vw;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: #0ef;
-  border-radius: 4rem;
-  -webkit-box-shadow: 0 0 1rem #0ef;
-          box-shadow: 0 0 1rem #0ef;
-  font-size: 1.6rem;
-  color: #323946;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-.btn:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.heading {
-  text-align: center;
-  font-size: 4.5rem;
 }
 
 .about {
@@ -294,10 +294,90 @@ span {
 .experience h2 {
   margin-bottom: 4rem;
 }
-.experience .education-container {
+.experience .experience-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2.5rem 1fr 2.5rem 1fr;
+  -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.experience .experience-container .experience-box {
+  position: relative;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 1rem #1f242d;
+          box-shadow: 0 0 1rem #1f242d;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.experience .experience-container .experience-box:hover .experience-layer {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.experience .experience-container .experience-box img {
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.experience .experience-container .experience-box img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.experience .experience-container .experience-box .experience-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(#0ef));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.experience .experience-container .experience-box .experience-layer h4 {
+  font-size: 4rem;
+}
+.experience .experience-container .experience-box .experience-layer p {
+  font-size: 2rem;
+  margin: 0.3rem 0 1rem;
+}
+.experience .experience-container .experience-box .experience-layer a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: #fff;
+  border-radius: 50%;
+}
+.experience .experience-container .experience-box .experience-layer a i {
+  font-size: 2rem;
+  color: #0ef;
 }

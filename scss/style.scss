@@ -19,6 +19,18 @@ body {
     background: $bgcolor;
     color: $colortext;
 }
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+span {
+    color: $maincolor;
+}
+
+// header website
+
 .header {
     position: fixed;
     top: 0;
@@ -54,14 +66,29 @@ body {
     }
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: $maincolor;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem $maincolor;
+    font-size: 1.6rem;
+    color: $bgcolor2;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    transition: .5s ease;
+    &:hover {
+        box-shadow: none;
+    }
 }
 
-span {
-    color: $maincolor;
-}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    }
+
+// section home
 
 .home {
     display: flex;
@@ -115,26 +142,8 @@ span {
     }
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: $maincolor;
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem $maincolor;
-    font-size: 1.6rem;
-    color: $bgcolor2;
-    letter-spacing: .1rem;
-    font-weight: 700;
-    transition: .5s ease;
-    &:hover {
-        box-shadow: none;
-    }
-}
 
-.heading {
-    text-align: center;
-    font-size: 4.5rem;
-    }
+// section about Me
 
 .about {
     display: flex;
@@ -163,6 +172,8 @@ span {
     }
     
 }
+
+// section about education
 
 .education {
     position: relative;
@@ -253,15 +264,72 @@ span {
     }
 }
 
+// Section about experience
+
 .experience {
     background: $bgcolor2;
     h2 {
         margin-bottom: 4rem;
     }
-    .education-container {
+    .experience-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
-        
+        align-items: center;
+        gap: 2rem;
+        .experience-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem $bgcolor;
+            overflow: hidden;
+            display: flex;
+            &:hover {
+                .experience-layer {
+                    transform: translateY(0);
+                }
+            }
+            img {
+                width: 100%;
+                transition: .5s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            .experience-layer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.1), $maincolor);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 0 4rem;
+                transform: translateY(100%);
+                transition: .5s ease;
+                h4 {
+                    font-size: 4rem;
+                }
+                p {
+                    font-size: 2rem;
+                    margin: .3rem 0 1rem;
+                }
+                a {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5rem;
+                    height: 5rem;
+                    background: $colortext;
+                    border-radius: 50%;
+                    i {
+                        font-size: 2rem;
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
     }
 }
