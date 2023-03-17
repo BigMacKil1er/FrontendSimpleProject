@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Sono:wght@400;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +34,7 @@ body {
         font-size: 2.5rem;
         color: $colortext;
         font-weight: 600;
+        font-family: 'Sono', sans-serif;
     }
     .navbar {
         a {
@@ -57,14 +59,22 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+span {
+    color: $maincolor;
+}
+
 .home {
     display: flex;
     justify-content: space-between;
     align-items: center;
     .home-content {
+        font-family: 'PT Sans', sans-serif;
         h3 {
             font-size: 3.2rem;
             font-weight: 700;
+            &:nth-of-type(2) {
+                margin-bottom: 2rem;
+            }
         }
         h1 {
             font-size: 5.6rem;
@@ -74,6 +84,7 @@ section {
         p {
             font-size: 1.6rem;
         }
+        
         .social-media {
             a {
                 display: inline-flex;
@@ -102,4 +113,71 @@ section {
             width: 35vw;
         }
     }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: $maincolor;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem $maincolor;
+    font-size: 1.6rem;
+    color: $bgcolor2;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    transition: .5s ease;
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    }
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: $bgcolor2;
+    .about-img {
+        img {
+            width: 35vw;
+        }
+    }
+    
+    .about-content {
+        h2 {
+            text-align: left;
+            line-height: 1.2;
+        }
+        h3 {
+            font-size: 2.6rem;
+        }
+        p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+        }
+    }
+    
+}
+
+.education {
+    .education-box {
+        h3 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-top: 2rem;
+        }
+        p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+        }
+        a {
+            text-align: center;
+        }
+    }
+    
 }

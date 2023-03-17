@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Sono:wght@400;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -41,6 +42,7 @@ body {
   font-size: 2.5rem;
   color: #fff;
   font-weight: 600;
+  font-family: "Sono", sans-serif;
 }
 .header .navbar a {
   font-size: 1.7rem;
@@ -61,6 +63,10 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+span {
+  color: #0ef;
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,9 +78,15 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
+.home .home-content {
+  font-family: "PT Sans", sans-serif;
+}
 .home .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
+}
+.home .home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
 }
 .home .home-content h1 {
   font-size: 5.6rem;
@@ -113,4 +125,69 @@ section {
 }
 .home .home-img img {
   width: 35vw;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: #0ef;
+  border-radius: 4rem;
+  -webkit-box-shadow: 0 0 1rem #0ef;
+          box-shadow: 0 0 1rem #0ef;
+  font-size: 1.6rem;
+  color: #323946;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background: #323946;
+}
+.about .about-img img {
+  width: 35vw;
+}
+.about .about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+.about .about-content h3 {
+  font-size: 2.6rem;
+}
+.about .about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.education .education-box h3 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-top: 2rem;
+}
+.education .education-box p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+.education .education-box a {
+  text-align: center;
 }
