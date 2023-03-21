@@ -14,6 +14,9 @@
 html {
     overflow-x: hidden;
     font-size: 62.5%;
+    @media (max-width: 1200px) {
+        font-size: 55%;
+    }
 }
 body {
     background: $bgcolor;
@@ -63,9 +66,15 @@ span {
         font-size: 3.6rem;
         color: $colortext;
         display: none;
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 }
 
+.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+}
 
 .btn {
     display: inline-block;
@@ -138,10 +147,22 @@ span {
     .home-img {
         img {
             width: 35vw;
+            animation: floatImage 4s ease-in-out infinite;
         }
     }
 }
 
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 // section about Me
 
@@ -200,7 +221,7 @@ span {
             font-size: 7rem;
             z-index: 3;
             top: 25px;
-            left: 48%;
+            left: 5%;
             transform: rotate(45deg);
             color: rgb(163, 0, 0);
             border: .4rem solid rgb(163, 0, 0);
@@ -406,6 +427,163 @@ span {
         i {
             font-size: 2.4rem;
             color: $bgcolor2;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+    .education {
+        padding-bottom: 7rem;
+    }
+    .experience {
+        padding-bottom: 7rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: $bgcolor;
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+        a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+    }
+    .active {
+        display: block;
+    }
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        .home-content {
+            h3 {
+                font-size: 2.6rem;
+            }
+            h1 {
+                font-size: 5rem;
+            }
+        }
+        .home-img {
+            img {
+                width: 70vw;
+                margin-top: 4rem;
+            }
+        }
+    }
+    
+    .about {
+        flex-direction: column-reverse;
+        .about-img {
+            img {
+                width: 70vw;
+                margin-top: 4rem;
+            }
+        }
+        
+    }
+
+    .education {
+        h2 {
+            margin-bottom: 3rem;
+        }
+        button {
+            i {
+                left: 10%;
+            }
+        }
+        .education-wrapper-box {
+            .education-box {
+                min-width: 30rem;
+            }
+        }
+        .education-intro {
+            h3 {
+                font-size: 3.5rem;
+            }
+            p {
+                font-size: 2.5rem;
+                // line-height: 2.5rem;
+            }
+        }
+    }
+
+    .experience {
+        h2 {
+            margin-bottom: 3rem;
+        }
+        .experience-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+}
+
+@media (max-width: 617px) {
+    .experience {
+        .experience-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .contact {
+        form {
+            .input-box {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 365px) {
+    .home {
+        .home-img {
+            img {
+                width: 90vw;
+            }
+        }
+    }
+
+    .about {
+        .about-img {
+            img {
+                width: 90vw;
+            }
+        }
+    }
+    .footer {
+        flex-direction: column-reverse;
+        p {
+            text-align: center;
+            margin-top: 2rem;
         }
     }
 }
