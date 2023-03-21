@@ -228,6 +228,14 @@ span {
           transform: rotate(315deg) scale(1.02);
   color: #ff3d3d;
 }
+.education .education-wrapper-disp-none {
+  display: none;
+}
+.education .education-wrapper {
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
 .education .education-wrapper-box {
   margin-top: 8rem;
   position: absolute;
@@ -380,4 +388,86 @@ span {
 .experience .experience-container .experience-box .experience-layer a i {
   font-size: 2rem;
   color: #0ef;
+}
+
+.contact {
+  margin-bottom: 3rem;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.contact form .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact form .input-box input, .contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #323946;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form textarea {
+  resize: none;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: #323946;
+}
+.footer .footer-text p {
+  font-size: 1.6rem;
+}
+.footer .footer-iconTop a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem;
+  background: #0ef;
+  border-radius: 0.8rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.footer .footer-iconTop a:hover {
+  -webkit-box-shadow: 0 0 1rem #0ef;
+          box-shadow: 0 0 1rem #0ef;
+}
+.footer .footer-iconTop i {
+  font-size: 2.4rem;
+  color: #323946;
 }

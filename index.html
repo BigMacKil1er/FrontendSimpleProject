@@ -18,7 +18,7 @@
             <a href="#about_me">Обо Мне</a>
             <a href="#my_education">Образование</a>
             <a href="#my_experience">Опыт работы</a>
-            <a href="#my_portfolio">Портфолио</a>
+            <a href="#contact">Связаться</a>
         </nav>
     </header>
 
@@ -79,12 +79,13 @@
                         и гражданско-процессуальном праве. В настоящее время являюсь аспирантом по тому же направлению. 
                         Имеют опыт в музыкальном образовании (5 лет фортепиано), 
                         а также достижения в лыжных гонках (5 место на окружных соревнованиях) и шахматах (2 разряд).</p>
-                    <a href="#" class="btn">ЧИТАТЬ ПОЛНОСТЬЮ</a>
+                    <!-- <a href="#my_education" onclick="showItem()" id="read-more" class="btn"></a> -->
+                    <button onclick="showItem()" id="read-more" class="btn">ЧИТАТЬ ПОЛНОСТЬЮ</button>
                 </div>
             </div>
         </div>
-        <div class="education-wrapper" style="display: none;">
-            <button><i class='bx bx-cross' ></i></button>
+        <div id="education-wrapper" class="education-wrapper-disp-none">
+            <button onclick="showItem()"><i class='bx bx-cross' ></i></button>
 
             <div class="education-wrapper-box">
                 <div class="education-box">
@@ -212,5 +213,35 @@
         </div>
     </section>
 
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Связаться со <span>мной</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Ваше имя/Имя организации:">
+                <input type="email" placeholder="Email Адрес:">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Номер телефона:">
+                <input type="text" placeholder="Заголовок:">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            <input type="submit" value="Отправить" class="btn">
+        </form>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Artyom Varibrus | All Right Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
