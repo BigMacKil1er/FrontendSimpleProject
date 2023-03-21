@@ -5,29 +5,243 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
-    <div id="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="block first"></div>
-    <div class="block" id="central-block">
-        <ul>
-            <li><a href="#">Элемент - 1</a></li>
-            <li>Элемент - 2</li>
-            <li>Элемент - 3</li>
-            <li>Элемент - 4</li>
-            <li>Элемент - 5</li>
-        </ul>
-    </div>
-    <div class="block"></div>
+    <!-- menu section -->
+    <header class="header">
+        <a href="#" class="logo">Arsen Grigoryan</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Начало</a>
+            <a href="#about_me">Обо Мне</a>
+            <a href="#my_education">Образование</a>
+            <a href="#my_experience">Опыт работы</a>
+            <a href="#contact">Связаться</a>
+        </nav>
+    </header>
+
+    <!-- Present dection -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Привет, это я</h3>
+            <h1>Члендок Олен</h1>
+            <h3>И я <span>Проектный менеджер</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Necessitatibus alias dolores nostrum. Tenetur sunt quis itaque magni.</p>
+            <div class="social-media">
+                <a href="https://vk.com/arsen_grigorian"><i class='bx bxl-vk'></i></a>
+                <a href="https://www.instagram.com/arsengriar/"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.facebook.com/grigorianarsenarturovich"><i class='bx bxl-facebook' ></i></a>
+            </div>
+            <a href="" class="btn">СКАЧАТЬ ГЕЙ ПОРНО</a>
+        </div>
+        <div class="home-img">
+            <img src="img/Ars Collage.png" alt="">
+        </div>
+    </section>
+
+    <!-- about me section -->
+    <section class="about" id="about_me">
+        <div class="about-img">
+            <img src="img/Ars Collage-2.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">Немного обо <span>мне</span></h2>
+            <h3>Проектный менеджер</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                elit. Dicta veritatis enim est fuga? Recusandae 
+                numquam repellat molestias quo, ratione fugiat 
+                enim nihil minus nam debitis quos nobis eos quibusdam 
+                ex officiis, sapiente perspiciatis sed? Laudantium, rem 
+                doloremque mollitia veritatis quam fuga pariatur possimus 
+                aspernatur porro!</p>
+            <a href="" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+        </div>
+        
+    </section>
+
+    <!-- education section -->
+
+    <section class="education" id="my_education">
+        <div class="wrapper">
+            <h2 class="heading">Мое <span>образование</span></h2>
+            <div class="education-container">
+                <div class="education-intro">
+                    <h3>Краткое описание</h3>
+                    <p>Окончил среднюю школу в городе Тарко-Сале в 2013 году. 
+                        В 2014 году поступил в Центр Довузовского Образования РАУ, 
+                        а затем в 2018 году получил степень магистра в области юриспруденции 
+                        с направлением корпоративный юрист, специализируясь на гражданском праве 
+                        и гражданско-процессуальном праве. В настоящее время являюсь аспирантом по тому же направлению. 
+                        Имеют опыт в музыкальном образовании (5 лет фортепиано), 
+                        а также достижения в лыжных гонках (5 место на окружных соревнованиях) и шахматах (2 разряд).</p>
+                    <!-- <a href="#my_education" onclick="showItem()" id="read-more" class="btn"></a> -->
+                    <button onclick="showItem()" id="read-more" class="btn">ЧИТАТЬ ПОЛНОСТЬЮ</button>
+                </div>
+            </div>
+        </div>
+        <div id="education-wrapper" class="education-wrapper-disp-none">
+            <button onclick="showItem()"><i class='bx bx-cross' ></i></button>
+
+            <div class="education-wrapper-box">
+                <div class="education-box">
+                    <i class='bx bxs-school'></i>
+                    <h3>Среднее образование</h3>
+                    <h4>2002-2013</h4>
+                    <p>(Российская Федерация, ЯНАО, г.Тарко-Сале, школа 
+                        №1)</p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+    
+                <div class="education-box">
+                    <i class='bx bx-music'></i>
+                    <h3>Доп. Оразование</h3>
+                    <h4>2008-2013</h4>
+                    <p>Музыкальное образование (5 лет, фортепиано); Лыжные гонки (5 место на
+                        окружных соревнованиях); 2 разряд по шахматам;
+                        </p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+    
+                <div class="education-box">
+                    <i class='bx bx-glasses' ></i>
+                    <h3>Подготовка</h3>
+                    <h4>2013-2014</h4>
+                    <p>Центр Довузовского Образования РАУ (ЦДО РАУ)</p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+    
+                <div class="education-box">
+                    <i class='bx bxs-graduation' ></i>
+                    <h3>Бакалавр</h3>
+                    <h4>2014-2018</h4>
+                    <p>Направление: Юриспруденция (бакалавр)
+                        Кафедра: Теории права и конституционного права.
+                        ВКР: «Правовая природа юридического лица: теоретико-практический анализ».</p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+    
+                <div class="education-box">
+                    <i class='bx bxs-graduation' ></i>
+                    <h3>Магистр</h3>
+                    <h4>2018-2020</h4>
+                    <p>Направление: Юриспруденция, корпоративный юрист (магистр)
+                        Кафедра: Гражданского права и гражданско-процессуального права
+                        ВКР: «Юридическое лицо публичного права»</p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+    
+                <div class="education-box">
+                    <i class='bx bxs-graduation' ></i>
+                    <h3>Аспирант</h3>
+                    <h4>2020-2023</h4>
+                    <p>Направление: Юриспруденция, корпоративный юрист (аспирант)
+                        Кафедра: Гражданского права и гражданско-процессуального права
+                        ВКР: Отсутствует.</p>
+                    <a href="#" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+        </div>
+        
+        </div>
+    </section>
+    <section class="experience" id="my_experience">
+        <h2 class="heading">Мой опыт <span>работы</span></h2>
+        <div class="experience-container">
+            <div class="experience-box">
+                <img src="img/experience-img-1.png" alt="">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+
+            <div class="experience-box">
+                <img src="img/experience-img-2.png" alt="">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+
+            <div class="experience-box">
+                <img src="img/meeting.png" alt="" width="300px">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+
+            <div class="experience-box">
+                <img src="img/experience-img-4.png" alt="" width="300px">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+
+            <div class="experience-box">
+                <img src="img/experience-img-3.png" alt="">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+
+            <div class="experience-box">
+                <img src="img/picture 1.jpg" alt="" width="300px">
+                <div class="experience-layer">
+                    <h4>ЗАО «ЮКЖД»</h4>
+                    <p>Ведущий юрисконсульт Дорожного центра фирменного 
+                        транспортного обслуживания</p>
+                    <a href=""><i class='bx bx-window-open'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Связаться со <span>мной</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Ваше имя/Имя организации:">
+                <input type="email" placeholder="Email Адрес:">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Номер телефона:">
+                <input type="text" placeholder="Заголовок:">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            <input type="submit" value="Отправить" class="btn">
+        </form>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Artyom Varibrus | All Right Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
