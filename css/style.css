@@ -551,6 +551,9 @@ span {
   }
 }
 @media (max-width: 768px) {
+  .header {
+    width: 86%;
+  }
   #menu-icon {
     display: block;
   }
@@ -630,6 +633,9 @@ span {
   }
 }
 @media (max-width: 450px) {
+  .header {
+    width: 86%;
+  }
   html {
     font-size: 50%;
   }
