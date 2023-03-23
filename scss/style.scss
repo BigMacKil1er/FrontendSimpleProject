@@ -127,8 +127,12 @@ span {
         //     font-size: 1.6rem;
         // }
         
-        .social-media {
-            a {
+        .social-medies {
+            a { 
+                i {
+                    font-size: 2rem;
+                    color: $maincolor;
+                }
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
@@ -137,8 +141,6 @@ span {
                 background: transparent;
                 border: .2rem solid $maincolor;
                 border-radius: 50%;
-                font-size: 2rem;
-                color: $maincolor;
                 margin: 3rem 1.4rem 3rem;
                 transition: all ease 0.5s;
                 &:hover {
@@ -464,6 +466,9 @@ span {
 }
 
 @media (max-width: 768px) {
+    .header {
+        width: 86%;
+    }
     #menu-icon {
         display: block;
     }
@@ -561,6 +566,9 @@ span {
 }
 
 @media (max-width: 450px) {
+    .header {
+        width: 86%;
+    }
     html {
         font-size: 50%;
     }
