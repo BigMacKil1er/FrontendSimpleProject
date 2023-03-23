@@ -426,9 +426,19 @@ span {
 .experience .experience-container .experience-box .experience-layer h4 {
   font-size: 4rem;
 }
+@media (max-width: 991px) {
+  .experience .experience-container .experience-box .experience-layer h4 {
+    font-size: 2rem;
+  }
+}
 .experience .experience-container .experience-box .experience-layer p {
   font-size: 2rem;
   margin: 0.3rem 0 1rem;
+}
+@media (max-width: 991px) {
+  .experience .experience-container .experience-box .experience-layer p {
+    font-size: 1.6rem;
+  }
 }
 .experience .experience-container .experience-box .experience-layer a {
   display: -webkit-inline-box;
@@ -624,7 +634,7 @@ span {
     margin-bottom: 3rem;
   }
   .experience .experience-container {
-    /* -ms-grid-columns: (1fr)[2]; */
+    -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
 }
