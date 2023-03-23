@@ -10,6 +10,14 @@
   outline: none;
 }
 
+p {
+  font-size: 2rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
 html {
   overflow-x: hidden;
   font-size: 62.5%;
@@ -131,9 +139,6 @@ span {
   font-weight: 700;
   line-height: 1.3;
 }
-.home .home-content p {
-  font-size: 1.6rem;
-}
 .home .home-content .social-media a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -220,7 +225,6 @@ span {
   font-size: 2.6rem;
 }
 .about .about-content p {
-  font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
 
@@ -250,15 +254,38 @@ span {
   margin-top: 2rem;
 }
 .education .education-intro p {
-  font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-.education button i {
-  position: absolute;
+.education .education-wrapper-disp-none {
+  display: none;
+}
+.education .wrapper-display-none {
+  display: none;
+}
+.education .education-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.education .education-wrapper button {
+  border-radius: 50%;
+  width: 7rem;
+  background: #1f242d;
+}
+.education .education-wrapper button i {
   font-size: 7rem;
-  z-index: 3;
-  top: 25px;
-  left: 5%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   color: rgb(163, 0, 0);
@@ -268,25 +295,12 @@ span {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-.education button i:hover {
+.education .education-wrapper button i:hover {
   -webkit-transform: rotate(315deg) scale(1.02);
           transform: rotate(315deg) scale(1.02);
   color: #ff3d3d;
 }
-.education .education-wrapper-disp-none {
-  display: none;
-}
-.education .education-wrapper {
-  display: block;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
 .education .education-wrapper-box {
-  margin-top: 8rem;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
   padding: 5rem;
   background: #1f242d;
   display: -webkit-box;
@@ -329,7 +343,6 @@ span {
   font-size: 2rem;
 }
 .education .education-wrapper-box .education-box p {
-  font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
 .education .education-wrapper-box .education-box a {
@@ -601,9 +614,6 @@ span {
   }
   .education .education-intro h3 {
     font-size: 3.5rem;
-  }
-  .education .education-intro p {
-    font-size: 2.5rem;
   }
   .experience h2 {
     margin-bottom: 3rem;
