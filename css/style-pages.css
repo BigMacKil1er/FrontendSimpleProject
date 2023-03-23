@@ -7,8 +7,19 @@
 }
 
 .experience ul {
-  list-style-type: none;
+  list-style-type: disc;
+  list-style: outside;
+}
+.experience ul li {
+  color: white;
 }
 .experience .innner-ul {
+  list-style: inside;
+  list-style-type: circle;
+}
+.experience .innner-ul .title-list {
   list-style-type: none;
+}
+.experience .innner-ul li {
+  color: rgb(184, 184, 184);
 }

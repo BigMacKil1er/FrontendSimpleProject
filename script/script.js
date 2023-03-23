@@ -46,7 +46,9 @@ window.onscroll = () => {
 
 function showItem() {
     let hiddenElement = document.getElementById('education-wrapper');
+    let unHiddenElement = document.getElementById('wrapper');
     hiddenElement.classList.toggle('education-wrapper');
+    unHiddenElement.classList.toggle('wrapper-display-none')
 }
 
 

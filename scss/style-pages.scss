@@ -11,9 +11,20 @@
 }
 .experience {
     ul {
-        list-style-type: none;
+        list-style-type: disc;
+        list-style: outside;
+        li {
+            color: white;
+        }
     }
     .innner-ul {
-        list-style-type: none;
+        .title-list {
+            list-style-type: none;
+        }
+        li {
+            color: rgb(184, 184, 184);
+        }
+        list-style: inside;
+        list-style-type: circle;
     }
 }
