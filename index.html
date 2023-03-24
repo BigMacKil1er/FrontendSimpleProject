@@ -223,16 +223,29 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Связаться со <span>мной</span></h2>
-        <form action="#" class="form" autocomplete="off">
+        <form action="#" class="form" method="post" autocomplete="off">
             <div class="input-box">
-                <input type="text" class="input input-name" id="name" name="name" placeholder="Ваше имя/Имя организации:" autocomplete="off">
-                <input type="email" class="input input-email" placeholder="Email Адрес:" autocomplete="off">
+                <label class="form_label">
+                    <input type="text" class="input input-name" id="name" name="name" placeholder="Ваше имя/Имя организации:" autocomplete="off">
+                </label>
+                <label class="form_label">
+                    <input type="email" class="input input-email" placeholder="Email Адрес:" autocomplete="off">
+                </label>
+                
             </div>
             <div class="input-box">
-                <input type="tel" class="input input-tel" placeholder="Номер телефона:" autocomplete="off">
-                <input type="text" class="input" placeholder="Заголовок:" autocomplete="off">
+                <label class="form_label">
+                    <input type="tel" class="input input-tel" placeholder="Номер телефона:" autocomplete="off">
+                </label>
+                <label class="form_label">
+                    <input type="text" class="input" placeholder="Заголовок:" autocomplete="off">
+                </label>
+                
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            <label class="form_label">
+                <textarea class=".textarea" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            </label>
+            
             <input type="submit" value="Отправить" class="btn">
         </form>
     </section>

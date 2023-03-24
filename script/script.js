@@ -86,21 +86,24 @@ inputmask.mask(telephone);
 const validation = new JustValidate(".form");
 
 validation
-    .addField('input-name', [
+    .addField('.input-name', [
         {
             rule: 'minLength',
-            value: 3
+            value: 3,
+            errorMessage: 'Минимальная длина 3 символа'
         },
         {
             rule: 'maxLength',
-            value: 50
+            value: 50,
+            errorMessage: 'Максимальная длина 50 символов'
         },
         {
             rule: 'required',
-            value: true
+            value: true,
+            errorMessage: 'Вы не ввели ваше имя/Название организации'
         }
     ])
-    .addField('input-email', [
+    .addField('.input-email', [
         {
             rule: 'required',
             errorMessage: 'Email не введен.'
@@ -111,7 +114,7 @@ validation
             errorMessage: 'Не верный Email.'
         }
     ])
-    .addField('input-tel', [
+    .addField('.input-tel', [
         {
             rule: 'required',
             value: true,
@@ -120,7 +123,7 @@ validation
         {
             rule: 'function',
             validator: function() {
-                const phone = telephone.inputMask.unmaskedvalue();
+                const phone = telephone.inputmask.unmaskedvalue();
                 return phone.length === 10;
             },
             errorMessage: 'Введите корректный номер телефона.'
