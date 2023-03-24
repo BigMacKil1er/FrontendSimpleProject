@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="boxicons.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">>
-    <title>Document</title>
-    <script defer src="script/validate.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <title>Arsen Grigoryan's website</title>
 </head>
 <body>
     <!-- menu section -->
@@ -224,16 +223,29 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Связаться со <span>мной</span></h2>
-        <form action="#">
+        <form action="#" class="form" method="post" autocomplete="off">
             <div class="input-box">
-                <input type="text" placeholder="Ваше имя/Имя организации:">
-                <input type="email" placeholder="Email Адрес:">
+                <label class="form_label">
+                    <input type="text" class="input input-name" id="name" name="name" placeholder="Ваше имя/Имя организации:" autocomplete="off">
+                </label>
+                <label class="form_label">
+                    <input type="email" class="input input-email" placeholder="Email Адрес:" autocomplete="off">
+                </label>
+                
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Номер телефона:">
-                <input type="text" placeholder="Заголовок:">
+                <label class="form_label">
+                    <input type="tel" class="input input-tel" placeholder="Номер телефона:" autocomplete="off">
+                </label>
+                <label class="form_label">
+                    <input type="text" class="input" placeholder="Заголовок:" autocomplete="off">
+                </label>
+                
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            <label class="form_label">
+                <textarea class=".textarea" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+            </label>
+            
             <input type="submit" value="Отправить" class="btn">
         </form>
     </section>
@@ -252,9 +264,17 @@
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <!-- Scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- mask for number -->
+    <script src="lib/inputmask.js"></script>
+
+    <!-- Validate -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <!-- script -->
     <script src="script/script.js"></script>
 
     <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+
+    <!-- <script src="script/validate.js"></script> -->
 </body>
 </html>

@@ -62,8 +62,8 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .education-container, .experience-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'left' });
 
 // TYPED JS
 
@@ -74,3 +74,80 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 })
+
+// validate
+
+const form = document.querySelector("form");
+const telephone = document.querySelector('input[type="tel"]');
+const inputmask = new Inputmask("+7 (999) 999-99-99");
+
+inputmask.mask(telephone);
+
+const validation = new JustValidate(".form");
+
+validation
+    .addField('.input-name', [
+        {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'Минимальная длина 3 символа'
+        },
+        {
+            rule: 'maxLength',
+            value: 50,
+            errorMessage: 'Максимальная длина 50 символов'
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Вы не ввели ваше имя/Название организации'
+        }
+    ])
+    .addField('.input-email', [
+        {
+            rule: 'required',
+            errorMessage: 'Email не введен.'
+        },
+        {
+            rule: 'email',
+            value: true,
+            errorMessage: 'Не верный Email.'
+        }
+    ])
+    .addField('.input-tel', [
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите номер телефона'
+        },
+        {
+            rule: 'function',
+            validator: function() {
+                const phone = telephone.inputmask.unmaskedvalue();
+                return phone.length === 10;
+            },
+            errorMessage: 'Введите корректный номер телефона.'
+
+        }
+    ]).onSuccess((event) => {
+        console.log('Validation passes and form submitted', event);
+
+        let formData = new FormData(event.target);
+
+        console.log(...formData);
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === 4) {
+                if(xhr.status === 200) {
+                    console.log('Отправильно');
+                }
+            }
+        }
+
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+
+        event.target.reset();
+    })
