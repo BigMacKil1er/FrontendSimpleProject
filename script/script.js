@@ -62,7 +62,7 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .education-container, .experience-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'right' });
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'left' });
 
 // TYPED JS

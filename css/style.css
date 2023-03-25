@@ -653,9 +653,6 @@ span {
   }
 }
 @media (max-width: 450px) {
-  .header {
-    width: 86%;
-  }
   html {
     font-size: 50%;
   }
