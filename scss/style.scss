@@ -1,6 +1,6 @@
 @import "variables";
 @import "mixins";
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Sono:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Rubik:wght@400;700&family=Sono:wght@400;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -11,13 +11,14 @@
     outline: none;
 }
 p {
-    font-size: 2rem;
+    font-size: $mainSize;
 }
 li {
-    font-size: 2rem;
+    font-size: $mainSize;
 }
 
 html {
+    @include font;
     overflow-x: hidden;
     font-size: 62.5%;
     @media (max-width: 1200px) {
@@ -31,7 +32,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 9% $mainSize;
 }
 
 span {
@@ -45,21 +46,21 @@ span {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: $mainSize 9%;
     background: $bgcolor;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     .logo {
-        font-size: 2.5rem;
+        font-size: $mainSizeH3;
         color: $colortext;
         font-weight: 600;
         font-family: 'Sono', sans-serif;
     }
     .navbar {
         a {
-            font-size: 1.7rem;
+            font-size: $mainSizeSmall;
             color: $colortext;
             margin-left: 4rem;
             &:hover, &.active {
@@ -88,7 +89,7 @@ span {
     background: $maincolor;
     border-radius: 4rem;
     box-shadow: 0 0 1rem $maincolor;
-    font-size: 1.6rem;
+    font-size: $mainSizeSmall;
     color: $bgcolor2;
     letter-spacing: .1rem;
     font-weight: 700;
@@ -112,30 +113,25 @@ span {
     .home-content {
         font-family: 'PT Sans', sans-serif;
         h3 {
-            font-size: 3.2rem;
+            font-size: $mainSizeH3;
             font-weight: 700;
             &:nth-of-type(2) {
-                margin-bottom: 2rem;
+                margin-bottom: $mainSize;
             }
         }
         h1 {
-            font-size: 5.6rem;
+            font-size: $H1;
             font-weight: 700;
             line-height: 1.3;
         }
-        // p {
-        //     font-size: 1.6rem;
-        // }
-        
+
         .social-medies {
             a { 
                 i {
-                    font-size: 2rem;
+                    font-size: $mainSize;
                     color: $maincolor;
                 }
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
+                @include flexLink;
                 width: 4rem;
                 height: 4rem;
                 background: transparent;
@@ -175,9 +171,7 @@ span {
 // section about Me
 
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     gap: 2rem;
     background: $bgcolor2;
     .about-img {
@@ -192,10 +186,9 @@ span {
             line-height: 1.2;
         }
         h3 {
-            font-size: 2.6rem;
+            font-size: $mainSizeH3;
         }
         p {
-            // font-size: 1.6rem;
             margin: 2rem 0 3rem;
         }
     }
@@ -209,17 +202,14 @@ span {
     max-width: 1660px;
     margin: 0 auto;
     .education-intro {
-        display: flex;
+        @include flexCenter;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         h3 {
             text-align: center;
-            font-size: 2.6rem;
+            font-size: $mainSizeH3;
             margin-top: 2rem;
         }
         p {
-            // font-size: 1.6rem;
             margin: 2rem 0 3rem;
         }
     }
@@ -233,9 +223,7 @@ span {
     }
 
     .education-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
         flex-direction: column;
         transition: .5s ease;
         button {
@@ -259,22 +247,14 @@ span {
     }
 
     .education-wrapper-box {
-        // margin-top: 8rem;
-        // position: absolute;
-        // z-index: 2;
-        // top: 0;
-        // left: 0;
         padding: 5rem;
         background: $bgcolor;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
         flex-wrap: wrap;
         gap: 2rem;
         .education-box {
             flex: 1 1 30rem;
             background: $bgcolor2;
-            // padding: 3rem 2rem 4rem;
             min-width: 50rem;
             min-height: 30rem;
             border-radius: 2rem;
@@ -288,13 +268,12 @@ span {
                 transform: rotate(0);
             }
             h3 {
-                font-size: 2.6rem;
+                font-size: $mainSizeH3;
             }
             h4 {
-                font-size: 2rem;
+                font-size: $mainSize;
             }
             p {
-                // font-size: 1.6rem;
                 margin: 1rem 0 3rem;
             }
             a {
@@ -345,9 +324,7 @@ span {
                 width: 100%;
                 height: 100%;
                 background: linear-gradient(rgba(0, 0, 0, 0.1), $maincolor);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexCenter;
                 flex-direction: column;
                 text-align: center;
                 padding: 0 4rem;
@@ -356,26 +333,24 @@ span {
                 h4 {
                     font-size: 4rem;
                     @media (max-width: 991px) {
-                        font-size: 2rem;
+                        font-size: $mainSize;
                     }
                 }
                 p {
-                    font-size: 2rem;
+                    font-size: $mainSize;
                     margin: .3rem 0 1rem;
                     @media (max-width: 991px) {
-                        font-size: 1.6rem;
+                        font-size: $mainSizeSmall;
                     }
                 }
                 a {
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flexLink;
                     width: 5rem;
                     height: 5rem;
                     background: $colortext;
                     border-radius: 50%;
                     i {
-                        font-size: 2rem;
+                        font-size: $mainSize;
                         color: $maincolor;
                     }
                 }
@@ -403,13 +378,13 @@ span {
                 width: 49%;
                 display: flex;
                 flex-direction: column-reverse;
-                font-size: 1.5rem;
+                font-size: $mainSizeSmall;
             }
         }
         .input-box .form_label .input, textarea {
             width: 100%;
             padding: 1.5rem;
-            font-size: 1.6rem;
+            font-size: $mainSizeSmall;
             color: $colortext;
             background: $bgcolor2;
             border-radius: .8rem;
@@ -430,14 +405,12 @@ span {
     background: $bgcolor2;
     .footer-text {
         p {
-            font-size: 1.6rem;
+            font-size: $mainSizeSmall;
         }
     }
     .footer-iconTop {
         a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
+            @include flexLink;
             padding: .8rem;
             background: $maincolor;
             border-radius: .8rem; 
@@ -447,7 +420,7 @@ span {
             }
         }
         i {
-            font-size: 2.4rem;
+            font-size: $mainSizeH3;
             color: $bgcolor2;
         }
     }
@@ -475,9 +448,6 @@ span {
 }
 
 @media (max-width: 768px) {
-    .header {
-        width: 86%;
-    }
     #menu-icon {
         display: block;
     }
@@ -493,7 +463,7 @@ span {
         display: none;
         a {
             display: block;
-            font-size: 2rem;
+            font-size: $mainSize;
             margin: 3rem 0;
         }
     }
@@ -505,10 +475,10 @@ span {
         justify-content: center;
         .home-content {
             h3 {
-                font-size: 2.6rem;
+                font-size: $mainSizeH3;
             }
             h1 {
-                font-size: 5rem;
+                font-size: $H1;
             }
         }
         .home-img {
@@ -544,15 +514,6 @@ span {
                 min-width: 30rem;
             }
         }
-        .education-intro {
-            h3 {
-                font-size: 3.5rem;
-            }
-            // p {
-            //     font-size: 2.5rem;
-            //     // line-height: 2.5rem;
-            // }
-        }
     }
 
     .experience {
@@ -575,9 +536,6 @@ span {
 }
 
 @media (max-width: 450px) {
-    // .header {
-    //     width: 86%;
-    // }
     html {
         font-size: 50%;
     }

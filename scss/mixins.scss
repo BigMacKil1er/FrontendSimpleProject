@@ -1,43 +1,16 @@
-@mixin grid($cols, $margin) {
-    float: left;
-    background: rgb(218, 0, 0);
-    height: 150px;
-    &:nth-child(#{$cols}n) {
-        margin-right: 0;
-    }
-    @if ($cols == 2) {
-        width: ((90% - (($cols - 1) * $margin)) / $cols);
-        margin: $margin / 2;
-    }
-    @else {
-        width: ((100% - (($cols - 1) * $margin)) / $cols);
-        margin-right: $margin;
-        margin-bottom: $margin;
-    }
-    &:hover {
-        background: fade-out($color: rgb(218, 0, 0), $amount: 0.3);
-    }
+@mixin font {
+    font-weight: normal;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
-@mixin linkStyle($link, $hover, $active, $visited) {
-    a {
-        color: $link;
-
-        &:hover {
-            color: $hover;
-        }
-        &:active {
-            color: $active;
-        }
-        // &:visited {
-        //     color: $visited;
-        // }
-    }
+@mixin flexLink {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin font($color, $fz) {
-    font-size: $fz;
-    font-weight: bold;
-    font-family: 'Sono', Arial, Helvetica, sans-serif;
-    color: $color;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
