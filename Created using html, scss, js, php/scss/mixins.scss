@@ -1,0 +1,16 @@
+@mixin font {
+    font-weight: normal;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+}
+
+@mixin flexLink {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
