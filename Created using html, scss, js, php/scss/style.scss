@@ -129,7 +129,6 @@ span {
             a { 
                 i {
                     font-size: $mainSize;
-                    color: $maincolor;
                 }
                 @include flexLink;
                 width: 4rem;
@@ -139,6 +138,7 @@ span {
                 border-radius: 50%;
                 margin: 3rem 1.4rem 3rem;
                 transition: all ease 0.5s;
+                color: $maincolor;
                 &:hover {
                     background: $maincolor;
                     color: $bgcolor2;

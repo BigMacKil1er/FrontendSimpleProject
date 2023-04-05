@@ -1,7 +1,10 @@
 <?
 require_once 'PHPMailer/PHPMailerAutoload.php';
 
-$admin_email = 'varik_varibrus@mail.ru';
+$admin_email = array();
+foreach ( $_POST["admin_email"] as $key => $value ) {
+	array_push($admin_email, $value);
+}
 
 $form_subject = trim($_POST["form_subject"]);
 
@@ -35,7 +38,7 @@ $message = "<table style='width: 50%;'>$message</table>";
 
 
 // От кого
-$mail->setFrom('info@' . $_SERVER['HTTP_HOST'], 'Your best site');
+$mail->setFrom('adm@' 	. $_SERVER['HTTP_HOST'], 'Ваш сайт');
  
 // Кому
 foreach ( $admin_email as $key => $value ) {

@@ -159,10 +159,13 @@ span {
   margin: 3rem 1.4rem 3rem;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  color: #0ef;
 }
 .home .home-content .social-medies a i {
   font-size: 2rem;
+  color: #0ef;
+}
+.home .home-content .social-medies a i:hover {
+  color: #323946;
 }
 .home .home-content .social-medies a:hover {
   background: #0ef;
