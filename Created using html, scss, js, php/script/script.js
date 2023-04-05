@@ -134,19 +134,18 @@ validation
 
         let formData = new FormData(event.target);
 
-        console.log(...formData);
 
         let xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4) {
                 if(xhr.status === 200) {
-                    console.log('Отправильно');
+                    alert('Ваше обращение зарегистрировано!');
                 }
             }
         }
 
-        xhr.open('POST', 'mail.php', true);
+        xhr.open('POST', 'https://arsen-grigorian.ru/mail.php', true);
         xhr.send(formData);
 
         event.target.reset();
